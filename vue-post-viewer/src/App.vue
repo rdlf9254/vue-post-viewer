@@ -1,9 +1,11 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
+import Home from '@/pages/Home.vue'
 </script>
 
 <template>
-  <HelloWorld msg="Vite + Vue" />
+  <home></home>
+  <!-- <HelloWorld msg="Vite + Vue" /> -->
 </template>
 
 <style scoped>
