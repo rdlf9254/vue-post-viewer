@@ -16,7 +16,9 @@
 </tbody> -->
 <template>
   <div class="overflow-x-auto p-4">
-    <table class="min-w-full border border-gray-300 shadow-md rounded-lg overflow-hidden">
+    <table
+      class="min-w-full border border-gray-300 shadow-md rounded-lg overflow-hidden"
+    >
       <thead class="bg-gray-800 text-white">
         <tr>
           <th class="px-4 py-2 text-left">Usuário & Post</th>
@@ -27,8 +29,18 @@
         <tr v-for="(item, i) in data" :key="i" class="border-b border-gray-300">
           <td class="px-4 py-3">
             <div class="flex flex-col">
-              <p class="text-gray-700 font-semibold text-nowrap">Id do usuário: {{ item.userId }}</p>
-              <p class="text-gray-500 text-sm text-nowrap">Id do post: {{ item.id }}</p>
+              <div class="flex flex-row">
+                <i class="uil uil-user pr-1 text-sm"></i>
+                <p class="text-gray-700 font-semibold text-nowrap">
+                  Id do usuário: {{ item.userId }}
+                </p>
+              </div>
+              <div class="flex flex-row">
+                <i class="uil uil-pen pr-1 text-sm"></i>
+                <p class="text-gray-500 text-sm text-nowrap">
+                  Id do post: {{ item.id }}
+                </p>
+              </div>
             </div>
           </td>
           <td class="px-4 py-3">
@@ -47,6 +59,6 @@ import { defineProps } from "vue";
 
 defineProps({
   data: Array,
-  loading:Boolean
+  loading: Boolean,
 });
 </script>

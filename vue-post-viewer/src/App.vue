@@ -1,11 +1,10 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import Home from '@/pages/Home.vue'
-</script>
-
 <template>
   <home></home>
 </template>
+
+<script setup>
+import Home from "@/pages/Home.vue";
+</script>
 
 <style scoped>
 .logo {
