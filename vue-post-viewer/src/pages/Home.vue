@@ -1,12 +1,10 @@
 <template>
-  <div class="">
-    <div class="max-w-7xl border-orange-100 border w-max h-screen">
-      <h1 class="text-2xl font-bold mb-4">Tabela de Posts</h1>
-      <view-switcher></view-switcher>
-      <!-- <card-view v-if="view==='card'" :loading="loading" :data ="posts"></card-view> -->
-      <table-view v-if="view === 'table'" :loading="loading" :data="posts" />
-      <loading-spinner></loading-spinner>
-    </div>
+  <div class="max-w-7xl">
+    <h1 class="text-2xl font-bold mb-4">Tabela de Posts</h1>
+    <view-switcher></view-switcher>
+    <!-- <card-view v-if="view==='card'" :loading="loading" :data ="posts"></card-view> -->
+    <table-view v-if="view === 'table'" :loading="loading" :data="posts" />
+    <loading-spinner></loading-spinner>
   </div>
 </template>
 
