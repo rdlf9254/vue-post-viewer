@@ -4,7 +4,6 @@
     <view-switcher></view-switcher>
     <!-- <card-view v-if="view==='card'" :loading="loading" :data ="posts"></card-view> -->
     <table-view v-if="view === 'table'" :loading="loading" :data="posts" />
-    <loading-spinner></loading-spinner>
   </div>
 </template>
 
@@ -15,23 +14,24 @@ import api from "@/services/api";
 import TableView from "@components/TableView.vue";
 // import CardView from '@components/CardView.vue'
 import ViewSwitcher from "@components/ViewSwitcher.vue";
-import LoadingSpinner from "@components/LoadingSpinner.vue";
 
 const posts = ref([]);
-
-var loading = false;
-var view = "table";
+const loading = ref(false);
+const view = ref("table");
 
 const fetchPosts = () => {
+  loading.value = true;
+
   api
     .get("/posts")
     .then((response) => {
-      posts.value = response.data; // Atualiza os dados
+      posts.value = response.data;
     })
     .catch((error) => {
       console.error("Erro ao buscar os posts:", error);
     })
     .finally(() => {
+      loading.value = false;
       console.log("Requisição finalizada!");
     });
 };

@@ -1,22 +1,24 @@
-<!-- <thead>
-  <tr>
-    <th>index</th>
-    <th>userId</th>
-    <th>id</th>
-    <th>title</th>
-    <th>body</th>
-  </tr>
-</thead> -->
-
-<!-- <tbody>
-  <tr v-for="item,i in data">
-    <td>{{ i }}</td>
-    <td v-for="dt in item">{{ dt }}</td>
-  </tr>
-</tbody> -->
 <template>
   <div class="overflow-x-auto p-4">
+    <div
+      v-if="loading"
+      class="flex flex-col items-center justify-center py-6 text-gray-600 dark:text-gray-300"
+    >
+      <loading-spinner class="mb-2" />
+      <p class="mt-2 text-lg font-semibold">Carregando...</p>
+    </div>
+
+    <div
+      v-else-if="!loading && (!data || data.length === 0)"
+      class="flex flex-col items-center justify-center py-6 text-gray-600 dark:text-gray-300"
+    >
+      <i class="uil uil-database-slash text-5xl text-gray-400"></i>
+      <p class="mt-2 text-lg font-semibold">Nenhum dado disponível</p>
+      <p class="text-sm text-gray-500">Tente novamente mais tarde.</p>
+    </div>
+
     <table
+      v-else
       class="min-w-full border border-gray-300 shadow-md rounded-lg overflow-hidden"
     >
       <thead class="bg-gray-800 text-white">
@@ -54,8 +56,10 @@
     </table>
   </div>
 </template>
+
 <script setup>
 import { defineProps } from "vue";
+import LoadingSpinner from "@components/LoadingSpinner.vue";
 
 defineProps({
   data: Array,
