@@ -17,19 +17,19 @@
       </tr>
     </tbody> -->
     <tbody>
-      <tr v-for="item,i in data" class="border border-stone-500">
+      <tr v-for="(item, i) in data" class="border border-stone-500">
         <td>
-          <div class=" flex-col">
+          <div class="flex-col">
             <p>Id do usuário: {{ item.userId }}</p>
             <p>Id do post: {{ item.id }}</p>
           </div>
-          </td>
+        </td>
         <td>
-          <div class=" flex-col">
+          <div class="flex-col">
             <p>Título: {{ item.title }}</p>
             <p>{{ item.body }}</p>
           </div>
-          </td>
+        </td>
       </tr>
     </tbody>
   </table>
