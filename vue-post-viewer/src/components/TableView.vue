@@ -1,27 +1,35 @@
 <template>
   <table class="table-auto">
-    <thead>
+    <!-- <thead>
       <tr>
-        <th>Song</th>
-        <th>Artist</th>
-        <th>Year</th>
+        <th>index</th>
+        <th>userId</th>
+        <th>id</th>
+        <th>title</th>
+        <th>body</th>
       </tr>
-    </thead>
+    </thead> -->
+
+    <!-- <tbody>
+      <tr v-for="item,i in data">
+        <td>{{ i }}</td>
+        <td v-for="dt in item">{{ dt }}</td>
+      </tr>
+    </tbody> -->
     <tbody>
-      <tr>
-        <td>The Sliding Mr. Bones (Next Stop, Pottersville)</td>
-        <td>Malcolm Lockyer</td>
-        <td>1961</td>
-      </tr>
-      <tr>
-        <td>Witchy Woman</td>
-        <td>The Eagles</td>
-        <td>1972</td>
-      </tr>
-      <tr>
-        <td>Shining Star</td>
-        <td>Earth, Wind, and Fire</td>
-        <td>1975</td>
+      <tr v-for="item,i in data" class="border border-stone-500">
+        <td>
+          <div class=" flex-col">
+            <p>Id do usuário: {{ item.userId }}</p>
+            <p>Id do post: {{ item.id }}</p>
+          </div>
+          </td>
+        <td>
+          <div class=" flex-col">
+            <p>Título: {{ item.title }}</p>
+            <p>{{ item.body }}</p>
+          </div>
+          </td>
       </tr>
     </tbody>
   </table>
@@ -31,7 +39,7 @@
 import { defineProps } from "vue";
 
 const props = defineProps({
-  columns: Array,
   data: Array,
+  loading: Boolean,
 });
 </script>
