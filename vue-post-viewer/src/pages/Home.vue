@@ -1,14 +1,15 @@
 <template>
-  <div class="max-w-7xl flex flex-col">
-    <div class="header flex flex-row items-center gap-5">
+  <div class="max-w-7xl flex flex-col pt-4">
+    <div class="header flex flex-row items-center gap-5 pt-3 pb-3 pl-4 pr-4 border">
       <div class="flex flex-nowrap items-center gap-4">
         <i class="uil uil-pen text-3xl"></i>
         <h1 class="text-3xl font-bold">Visualizador de Posts</h1>
       </div>
 
-      <view-switcher></view-switcher>
+      <view-switcher @switch="setView"></view-switcher>
     </div>
     <card-view
+    v-if="view === 'cards'"
       class="w-full flex-1"
       :loading="loading"
       :data="posts"
@@ -45,6 +46,12 @@ const fetchPosts = () => {
       console.log("Requisição finalizada!");
     });
 };
+
+const setView = (newView) => {
+  view.value = newView
+  console.log('Evento recebido:', newView);
+};
+
 
 onMounted(fetchPosts);
 </script>
