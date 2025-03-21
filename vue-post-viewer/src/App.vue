@@ -5,13 +5,11 @@ import Home from '@/pages/Home.vue'
 
 <template>
   <home></home>
-  <!-- <HelloWorld msg="Vite + Vue" /> -->
 </template>
 
 <style scoped>
 .logo {
   height: 6em;
-  padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
 }
