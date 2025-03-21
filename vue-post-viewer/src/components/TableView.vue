@@ -23,7 +23,7 @@
     >
       <thead class="bg-gray-800 text-white">
         <tr>
-          <th class="px-4 py-2 text-left">Usuário & Post</th>
+          <th class="px-4 py-2 text-left">Id</th>
           <th class="px-4 py-2 text-left">Detalhes</th>
         </tr>
       </thead>
@@ -31,16 +31,9 @@
         <tr v-for="(item, i) in data" :key="i" class="border-b border-gray-300">
           <td class="px-4 py-3">
             <div class="flex flex-col">
-              <!-- <div class="flex flex-row">
-                <i class="uil uil-user pr-1 text-sm"></i>
-                <p class="text-gray-700 font-semibold text-nowrap">
-                  Id do usuário: {{ item.userId }}
-                </p>
-              </div> -->
               <div class="flex flex-row">
-                <i class="uil uil-pen pr-1 text-sm"></i>
                 <p class="text-gray-500 text-sm text-nowrap">
-                  Id do post: {{ item.id }}
+                  {{ item.id }}
                 </p>
               </div>
             </div>
