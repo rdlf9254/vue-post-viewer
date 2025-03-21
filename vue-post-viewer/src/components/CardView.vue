@@ -18,6 +18,5 @@ import Card from "@components/Card.vue";
 
 defineProps({
   data: Array,
-  loading: Boolean,
 });
 </script>

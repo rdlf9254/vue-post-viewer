@@ -1,15 +1,7 @@
 <template>
   <div class="overflow-x-auto p-4">
     <div
-      v-if="loading"
-      class="flex flex-col items-center justify-center py-6 text-gray-600 dark:text-gray-300"
-    >
-      <loading-spinner class="mb-2" />
-      <p class="mt-2 text-lg font-semibold">Carregando...</p>
-    </div>
-
-    <div
-      v-else-if="!loading && (!data || data.length === 0)"
+      v-if="!data || data.length === 0"
       class="flex flex-col items-center justify-center py-6 text-gray-600 dark:text-gray-300"
     >
       <i class="uil uil-database-slash text-5xl text-gray-400"></i>
@@ -52,10 +44,8 @@
 
 <script setup>
 import { defineProps } from "vue";
-import LoadingSpinner from "@components/LoadingSpinner.vue";
 
 defineProps({
   data: Array,
-  loading: Boolean,
 });
 </script>

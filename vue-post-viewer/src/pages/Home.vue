@@ -10,12 +10,19 @@
 
       <view-switcher @switch="setView"></view-switcher>
     </div>
+    <div
+      v-if="loading"
+      class="flex flex-col items-center justify-center py-6 text-gray-600 dark:text-gray-300"
+    >
+      <loading-spinner class="mb-2" />
+      <p class="mt-2 text-lg font-semibold">Carregando...</p>
+    </div>
+
     <card-view
-      v-if="view === 'cards'"
-      :loading="loading"
+      v-else-if="!loading && view === 'cards'"
       :data="posts"
     ></card-view>
-    <table-view v-if="view === 'table'" :loading="loading" :data="posts" />
+    <table-view v-else-if="!loading && view === 'table'" :data="posts" />
   </div>
 </template>
 
@@ -26,6 +33,7 @@ import api from "@/services/api";
 import TableView from "@components/TableView.vue";
 import CardView from "@components/CardView.vue";
 import ViewSwitcher from "@components/ViewSwitcher.vue";
+import LoadingSpinner from "@components/LoadingSpinner.vue"
 
 const posts = ref([]);
 const loading = ref(false);
