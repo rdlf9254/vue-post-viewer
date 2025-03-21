@@ -31,12 +31,12 @@
         <tr v-for="(item, i) in data" :key="i" class="border-b border-gray-300">
           <td class="px-4 py-3">
             <div class="flex flex-col">
-              <div class="flex flex-row">
+              <!-- <div class="flex flex-row">
                 <i class="uil uil-user pr-1 text-sm"></i>
                 <p class="text-gray-700 font-semibold text-nowrap">
                   Id do usuário: {{ item.userId }}
                 </p>
-              </div>
+              </div> -->
               <div class="flex flex-row">
                 <i class="uil uil-pen pr-1 text-sm"></i>
                 <p class="text-gray-500 text-sm text-nowrap">
