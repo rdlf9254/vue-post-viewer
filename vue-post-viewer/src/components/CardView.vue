@@ -6,8 +6,6 @@
     <card
       v-for="(item, i) in data"
       :key="i"
-      :user-id="item.userId"
-      :post-id="item.id"
       :title="item.title"
       :body="item.body"
       class="w-full h-full"
