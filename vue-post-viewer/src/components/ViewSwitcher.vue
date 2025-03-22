@@ -1,15 +1,19 @@
 <template>
-  <div class="flex flex-row flex-nowrap">
-    <i
-      @click="switchView('table')"
-      class="uil uil-list-ul text-2xl pt-1 pb-1 pl-2 pr-2 border rounded-l-md cursor-pointer"
-      :class="view === 'table' ? 'bg-blue-950':''"
-    ></i>
-    <i
-      @click="switchView('cards')"
-      class="uil uil-apps text-2xl pt-1 pb-1 pl-2 pr-2 border rounded-r-md cursor-pointer"
-      :class="view === 'cards' ? 'bg-blue-950':''"
-    ></i>
+  <div class="flex flex-row flex-nowrap items-center gap-4">
+
+    <span class="text-sm text-gray-400">Visualização:</span>
+    <div class="flex flex-row flex-nowrap items-center">
+      <i
+        @click="switchView('table')"
+        class="uil uil-list-ul text-2xl pt-1 pb-1 pl-2 pr-2 border rounded-l-md cursor-pointer"
+        :class="view === 'table' ? 'bg-blue-950':''"
+      ></i>
+      <i
+        @click="switchView('cards')"
+        class="uil uil-apps text-2xl pt-1 pb-1 pl-2 pr-2 border rounded-r-md cursor-pointer"
+        :class="view === 'cards' ? 'bg-blue-950':''"
+      ></i>
+    </div>
   </div>
 </template>
 
