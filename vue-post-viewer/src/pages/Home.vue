@@ -1,7 +1,7 @@
 <template>
-  <div class="max-w-7xl flex flex-col pt-4">
+  <div class="max-w-7xl w-full flex flex-col p-4">
     <div
-      class="header flex flex-row items-center gap-5 pt-3 pb-3 pl-4 pr-4 bg-gray-800 rounded-lg"
+      class="header flex flex-row w-full items-center gap-5 pt-3 pb-3 pl-4 pr-4 bg-gray-800 rounded-lg ring shadow-xl ring-gray-900/5 "
     >
       <div class="flex flex-nowrap items-center gap-4">
         <i class="uil uil-pen text-3xl"></i>

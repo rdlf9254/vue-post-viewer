@@ -17,8 +17,9 @@
 
 
 body {
+  width: 100%;
   margin: 0;
-  display: flex;
+  /* display: flex; */
   place-items: center;
   min-width: 320px;
   justify-content: center;
