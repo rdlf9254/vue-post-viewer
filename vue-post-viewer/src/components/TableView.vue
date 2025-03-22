@@ -32,8 +32,8 @@
           </td>
           <td class="px-4 py-3">
             <div class="flex flex-col">
-              <p class="text-gray-800 font-bold">{{ item.title }}</p>
-              <p class="text-gray-600 text-sm mt-1">{{ item.body }}</p>
+              <p class="text-gray-800 font-bold first-letter:uppercase">{{ item.title }}</p>
+              <p class="text-gray-600 text-sm mt-1 first-letter:uppercase">{{ item.body }}</p>
             </div>
           </td>
         </tr>
