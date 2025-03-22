@@ -28,12 +28,12 @@
 }
 
 .half-circle-spinner .circle.circle-1 {
-  border-top-color: var(--color-gray-800);
+  border-top-color: white;
   animation: half-circle-spinner-animation 1s infinite;
 }
 
 .half-circle-spinner .circle.circle-2 {
-  border-bottom-color: var(--color-gray-800);
+  border-bottom-color: white;
   animation: half-circle-spinner-animation 1s infinite alternate;
 }
 
