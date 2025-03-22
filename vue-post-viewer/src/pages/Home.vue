@@ -1,7 +1,7 @@
 <template>
   <div class="w-full flex flex-col p-4">
     <div
-      class="header flex flex-row justify-between w-full items-center gap-5 pt-3 pb-3 pl-4 pr-4 bg-gray-800 rounded-lg ring shadow-xl ring-gray-900/5 "
+      class="header flex flex-row justify-between w-full items-center gap-5 pt-3 pb-3 pl-4 pr-4 bg-gray-800 rounded-lg ring shadow-xl ring-gray-900/5"
     >
       <div class="flex flex-nowrap items-center gap-4">
         <i class="uil uil-pen text-3xl"></i>
@@ -52,13 +52,11 @@ const fetchPosts = () => {
     })
     .finally(() => {
       loading.value = false;
-      console.log("Requisição finalizada!");
     });
 };
 
 const setView = (newView) => {
   view.value = newView;
-  console.log("Evento recebido:", newView);
 };
 
 onMounted(fetchPosts);

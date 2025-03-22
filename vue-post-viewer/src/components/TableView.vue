@@ -20,7 +20,11 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="(item, i) in data" :key="i" class="border-b border-gray-600 bg-gray-700">
+        <tr
+          v-for="(item, i) in data"
+          :key="i"
+          class="border-b border-gray-600 bg-gray-700"
+        >
           <td class="pl-8 pr-4 py-3">
             <div class="flex flex-col">
               <div class="flex flex-row">
@@ -32,8 +36,12 @@
           </td>
           <td class="pr-8 pl-4 py-3">
             <div class="flex flex-col">
-              <p class="text-white font-bold first-letter:uppercase">{{ item.title }}</p>
-              <p class="text-gray-300 text-sm mt-1 first-letter:uppercase">{{ item.body }}</p>
+              <p class="text-white font-bold first-letter:uppercase">
+                {{ item.title }}
+              </p>
+              <p class="text-gray-300 text-sm mt-1 first-letter:uppercase">
+                {{ item.body }}
+              </p>
             </div>
           </td>
         </tr>
