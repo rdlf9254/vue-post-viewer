@@ -8,7 +8,7 @@ Este é um projeto desenvolvido com Vue.js 3 para visualizar posts em diferentes
 
    ```bash
    git clone git@github.com:rdlf9254/vue-post-viewer.git
-   cd vue-post-viewer
+   cd vue-post-viewer/vue-post-viewer
 
    ```
 
