@@ -1,6 +1,6 @@
 # Vue Post Viewer
 
-Este é um projeto Vue.js 3 para visualização de posts em tabela ou em cards.
+Este é um projeto desenvolvido com Vue.js 3 para visualizar posts em diferentes formatos, como em uma tabela ou em cards. Ele oferece uma interface interativa para exibir posts de maneira clara e organizada.
 
 ## Instalação
 
@@ -24,4 +24,5 @@ Para rodar o projeto em ambiente de desenvolvimento, utilize o comando:
 
     npm run dev
 
-Isso irá iniciar o servidor de desenvolvimento e você pode acessar o projeto diretamente pelo navegador com o link fornecido.
+Isso iniciará o servidor de desenvolvimento, e você poderá acessar o projeto diretamente no seu navegador no endereço localhost fornecido.
+
