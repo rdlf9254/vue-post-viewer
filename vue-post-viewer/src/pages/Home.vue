@@ -61,3 +61,11 @@ const setView = (newView) => {
 
 onMounted(fetchPosts);
 </script>
+
+<style>
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+  }
+}
+</style>
